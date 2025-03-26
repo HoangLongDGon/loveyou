@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chỉ yêu mình Trân</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #e91e63;
+        }
+        #question {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #yes {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        #no {
+            background-color: #f44336;
+            color: #fff;
+            position: absolute;
+        }
+        #hearts {
+            font-size: 50px;
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💖 Trân ơi, tớ có điều này muốn nói... 💖</h1>
+    <p id="question">Cậu có nhớ tớ không zạaaaaaaa? 🥺</p>
+
+    <button id="yes" onclick="showLove()">Có 💕</button>
+    <button id="no" onmouseover="moveButton()">Không 😢</button>
+
+    <div id="hearts">❤️❤️❤️ Tớ nhớ cậu, thích cậu yêu cậu rất nhìuuuu ❤️❤️❤️</div>
+
+    <script>
+        function showLove() {
+            document.getElementById("hearts").style.display = "block";
+            document.getElementById("question").innerText = "Tớ biết mà! 🥰";
+        }
+
+        function moveButton() {
+            let x = Math.random() * window.innerWidth - 100;
+            let y = Math.random() * window.innerHeight - 50;
+            let button = document.getElementById("no");
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html>
